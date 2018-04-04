@@ -252,10 +252,8 @@ open class SwipeTableViewCell: UITableViewCell {
         } else {
             actionsView.leftAnchor.constraint(equalTo: rightAnchor).isActive = true
         }
-		
-		actionsView.setNeedsUpdateConstraints()
-		
-		self.actionsView = actionsView
+        
+        self.actionsView = actionsView
 
         state = .dragging
         
@@ -391,7 +389,7 @@ extension SwipeTableViewCell {
 
     func reset() {
         state = .center
-        clipsToBounds = false
+        
         actionsView?.removeFromSuperview()
         actionsView = nil
     }
